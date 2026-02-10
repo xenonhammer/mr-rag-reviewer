@@ -1,0 +1,9 @@
+services:
+  reviewer:
+    build: .
+    container_name: mr-rag-reviewer
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8081:8081"
