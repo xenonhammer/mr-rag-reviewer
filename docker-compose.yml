@@ -5,5 +5,7 @@ services:
     restart: unless-stopped
     env_file:
       - .env
+    extra_hosts:
+      - "gitlab.local:host-gateway"
     ports:
       - "8081:8081"
